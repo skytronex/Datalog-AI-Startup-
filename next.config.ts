@@ -1,12 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // 1. "export" tells Next.js to create a static HTML folder (./out)
-  output: 'export', 
-  
-  // 2. Disable server-side image optimization (GitHub Pages cannot do this)
+  output: "export",  // Required for GitHub Pages
+  basePath: "/Datalog-AI-Startup-", // MUST match your repository name exactly
   images: {
-    unoptimized: true, 
+    unoptimized: true, // Required for static export
   },
 };
 
